@@ -2,7 +2,7 @@
   "name": "azureapirest",
   "version": "1.0.0",
   "description": "API Rest alojada en Azure",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
