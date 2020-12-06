@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const app = express();
 
+var port = process.env.PORT || 3000;
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -148,6 +150,6 @@ app.use((req, res, next) => {
     res.status(404).send(respuesta);
 });
 
-app.listen(3000, () => {
-    console.log("El servidor está inicializado en el puerto 3000");
+app.listen(port, () => {
+    console.log('El servidor está inicializado en el puerto ' + port);
 });
