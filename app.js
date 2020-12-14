@@ -34,6 +34,22 @@ app.get('/usuario2', (req, res) => {
 });
 
 
+
+
+const usersController = require("./controllers/users");
+
+app.route('/usuariosv3')
+    .get(usersController.findAllUsers)
+    .post(usersController.addUser);
+
+app.route('/usuariov3/:id')
+    .get(usersController.findByID)
+    .put(usersController.updateUser)
+    .delete(usersController.deleteUser);
+
+
+
+
 app.route('/usuario')
     .get((req, res) => {
         respuesta = {
